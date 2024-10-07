@@ -6,11 +6,18 @@ import model.item.*
 import model.personnage.Personnage
 import dao.QualiteDAO
 import generateur.GenerateurQualites
+import generateur.GenerateurTypeArmes
+import generateur.GenerateurTypeArmures
 
 //DEMO MISSION 1
 val generateurQualites = GenerateurQualites("assets/qualites.csv")
 val qualites = generateurQualites.generer()
 
+val generateurTypeArme = GenerateurTypeArmes("assets/TypeArmes.csv")
+val typeArmes = generateurTypeArme.generer()
+
+val generateurTypeArmures = GenerateurTypeArmures("assets/TypeArmures.csv")
+val typeArmure = generateurTypeArmures.generer()
 
 
 //DEMO MISSION 2 :

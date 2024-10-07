@@ -1,0 +1,2 @@
+nom; pointDeVie; pointDeVieMax; attaque; vitesse; armeEquipee; armureEquipee; inventaire
+"Marvin le Kobold";25; 25; 3; 4; 6; 12; dague;potionDeSoin2, dague
