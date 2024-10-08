@@ -1,8 +1,13 @@
-package generateur
+/*package generateur
 
+import arme
+import armure
+import model.item.Arme
+import model.item.Armure
 import model.personnage.Monstres
-
+import model.item.Item
 import model.item.Qualite
+import typeArmes
 import java.nio.file.Paths
 import java.nio.file.Files
 
@@ -28,9 +33,9 @@ class GenerateurMonstres(val cheminFichier: String) {
         for (i in 1..listeObjCSV.lastIndex) {
             val ligneObjet = listeObjCSV[i].split(";")
             val cle = ligneObjet[0].lowercase()
-            val objet = Qualite(nom = ligneObjet[0], bonusRarete = ligneObjet[1].toInt(), couleur = ligneObjet[2])
+            val objet = Monstres(nom = ligneObjet[0], pointDeVie = ligneObjet[1].toInt(), pointDeVieMax = ligneObjet[2].toInt(), attaque = ligneObjet[3].toInt(), defense = ligneObjet[4].toInt(), endurance = ligneObjet[5].toInt(), vitesse = ligneObjet[6].toInt(), armeEquipee = arme[ligneObjet[7]]!!, armureEquipee = armure[ligneObjet[8]]!!, inventaire = ligneObjet[9])
             mapObjets[cle] = objet
         }
         return mapObjets
     }
-}
+}*/

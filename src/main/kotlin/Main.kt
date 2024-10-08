@@ -5,13 +5,15 @@ import model.jeu.TirageDes
 import model.item.*
 import model.personnage.Personnage
 import dao.QualiteDAO
+import generateur.GenerateurArmes
+import generateur.GenerateurArmures
 import generateur.GenerateurQualites
 import generateur.GenerateurTypeArmes
 import generateur.GenerateurTypeArmures
 
 //DEMO MISSION 1
 val generateurQualites = GenerateurQualites("assets/qualites.csv")
-val qualites = generateurQualites.generer()
+val qualitesFromCSV = generateurQualites.generer()
 
 val generateurTypeArme = GenerateurTypeArmes("assets/TypeArmes.csv")
 val typeArmes = generateurTypeArme.generer()
@@ -19,17 +21,23 @@ val typeArmes = generateurTypeArme.generer()
 val generateurTypeArmures = GenerateurTypeArmures("assets/TypeArmures.csv")
 val typeArmure = generateurTypeArmures.generer()
 
+val generateurArme = GenerateurArmes("assets/Armes.csv")
+val arme = generateurArme.generer()
+
+val generateurArmures = GenerateurArmures("assets/Armures.csv")
+val armure = generateurArmures.generer()
 
 //DEMO MISSION 2 :
 // TODO Retirer les commentaires des lignes 21 et 24
 // TODO : A la ligne 13 renomé la variable qualites en qualitesFromCSV
 //instanciation de la co à la BDD
 val coBDD = BDD()
+
 //instanciation d'un objet QualiteDAO
-//val qualiteRepository = QualiteDAO(coBDD)
+val qualiteRepository = QualiteDAO(coBDD)
 //
 //Sauvegarde des Qualites dans la BDD
-//val qualites=qualiteRepository.saveAll(qualitesFromCSV.values)
+val qualites=qualiteRepository.saveAll(qualitesFromCSV.values)
 
 
 // instanciation des Sorts (pour le(s) mage(s))

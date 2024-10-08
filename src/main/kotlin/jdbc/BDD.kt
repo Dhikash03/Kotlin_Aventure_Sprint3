@@ -12,9 +12,9 @@ import java.sql.*
  */
 class BDD(
 
-    var url: String = "jdbc:mysql://localhost:3306/db_kotlinAventure",
-    var user: String = "root",
-    var password: String = "",
+    var url: String = "jdbc:mysql://172.16.0.210:3306/db_kotlinAventure_ndhokhutsa",
+    var user: String = "ndhokhutsa",
+    var password: String = "Yidafo48",
 ) {
     var connectionBDD: Connection? = null
 
@@ -65,8 +65,11 @@ class BDD(
     /**
      * Finalise l'objet BDD en fermant la connexion à la base de données.
      */
-    protected fun finalize() {
+    /*
+    protected fun finalize(){
         // Fermer la connexion à la base de données lors de la finalisation de l'objet BDD
      this.connectionBDD?.close()
     }
+
+     */
 }
